@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'bulma/css/bulma.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/sourcefont.css' %}">
+
+  <style>
+    html{
+        overflow-y:hidden
+
+    }
+    .input{
+          border-radius:0px;
+          font-family:Source Sans Pro
+    }
+  </style>
+  <title>Neptuna</title>
+</head>
+<body >
+  <!--<figure class="image">
+    <img src="{% static 'img/background9.jpg' %}">-->
+
+  </figure>
+
+    <div class="hero is-fullheight">
+
+
+          <div class="hero-body" style="background:url({% static 'img/background9.jpg' %});background-size:cover">
+
+            <div class="columns" style="padding-bottom:10px;width:35%;margin-left:30%;box-shadow:1px solid rgba(102,153,153,0.4);background-color:rgba(102,153,153,0.4)">
+              <div class="column is-1"></div>
+              <div class="column is-10">
+                  <h3 style="color:#fff;font-weight:bold;text-align:center;
+                font-family:Times New Roman, Times, serif;
+                 font-size:35px">NEPTUNA</h3>
+                <div class="field">
+                  <div id="username">
+
+                  </div>
+                  <script src="{% static "frontend/main.js" %}"></script>
+
+
+                </div>
+
+                <div class="field">
+                  <div id="password">
+                    <input class="input" type="password" placeholder="Mot de passe" value="">
+                  </div>
+
+
+                </div>
+                <div class="field">
+                  <div id="button">
+                    <input class="button" type="submit" value="Connexion"
+                           style="width:100%;border-radius:0px;background-color:#669999;color:#fff;
+                                  border:1px solid #669999;
+                                  font-family:Source Sans Pro">
+                  </div>
+                </div>
+              </div>
+            <div class="column is-1"></div>
+
+           </div>
+
+          </div>
+
+    </div>
+
+</body>
+
+<!--<script src="{% static 'frontend/main.js' %}"></script>-->
+</html>
