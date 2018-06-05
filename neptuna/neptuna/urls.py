@@ -20,6 +20,9 @@ from mainApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('auth/',views.authentification,name='authification'),
-    path('', include('frontend.urls'))
+    path('auth/',views.authentification,name='authentification'),
+    path('', include('frontend.urls')),
+    path('create/project',views.create_project),
+    path('delete/project',views.delete_project),
+    path('instantiate/projectcontainer',views.instantiate_accueil)
 ]

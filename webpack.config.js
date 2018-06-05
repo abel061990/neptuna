@@ -4,8 +4,14 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
+        use:{
           loader: "babel-loader"
+        }
+      },
+	{
+        test: /\.(png|jpg|jpeg)$/,
+        use:{
+          loader: "url-loader"
         }
       }
     ]

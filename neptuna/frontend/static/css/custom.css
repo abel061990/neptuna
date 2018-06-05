@@ -1,0 +1,21 @@
+.modal-content{
+        border-radius:0px
+}
+.form-control{
+            border-radius:0px
+}
+.btn{
+    border-radius:0px
+}
+.panel{
+        background-color:#fff;
+        height:150px;
+        padding:10px
+}
+.sourceType{
+
+
+}
+a{
+ text-decoration:none !important
+}

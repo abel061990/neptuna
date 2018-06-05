@@ -1,10 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/jqueryui.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-4.1.1/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fontawesome/web-fonts-with-css/css/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sourcefont.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <script src="{% static 'jquery.min.js' %}"></script>
+    <script src="{% static 'jquery-ui.min.js' %}"></script>
+    <script src="{% static 'popper.min.js' %}"></script>
+    <script src="{% static 'bootstrap-4.1.1/js/bootstrap.min.js' %}"></script>
 
+    <title>Neptuna</title>
+    <style>
+        .fixed-top{
+                padding-right:0px;
+                padding-left:0px;
+                height:29px
+        }
+        a.obj.active{
+                    background-color:#3d5c5c
+        }
+
+        body{
+             height:100%;
+             font-family:Source Sans Pro
+        }
+        html{
+            height:100%
+        }
+        span[class*="MuiBadge-colorPrimary"]{
+                        background-color:#ffb31a !important
+        }
+        .iconConteneur:hover{
+                                background-color: #e6e6e6 !important
+        }
+
+
+
+    </style>
+    <script>
+        $(document).ready(function(){
+
+                $('[data-toggle="tooltip"]').tooltip();
+
+                $('#togglebtn').click(function(){
+
+                            if(this.className=="navbar-brand nonclick"){
+                            $('#sidepanel').css('width','200px');
+                            $('.item-meaning').show();
+                            this.className="navbar-brand click"
+                                }
+                            else{
+                                $('#sidepanel').css('width','29px');
+                                $('.item-meaning').hide();
+                                this.className="navbar-brand nonclick"
+                            }
+                });
+                $('.obj').click(function(){
+                        $('.obj').removeClass('active');
+                        $(this).addClass('active');
+                        $('#sidepanel').css('width','29px');
+                        $('.item-meaning').hide();
+                        $('#togglebtn').attr('class',"navbar-brand nonclick");
+                        if(this.id=="connector-icon"){
+                                    $('#projets').hide();
+                                    $('#connection').show()
+                                    }
+                        else{
+                                $('#connection').hide();
+                                $('#projets').show()
+
+                        }
+
+
+                });
+
+
+        });
+
+    </script>
+</head>
+<body style="background-color:#e6e6e6">
+    <nav class="navbar navbar-expand-md fixed-top" style="background-color:#669999">
+        <a id="togglebtn" class="navbar-brand nonclick" style="padding-top:0px;padding-left:4px;display:block;height:29px;width:29px;background-color:#3d5c5c" href="#">
+            <i style="color:#fff" class="fas fa-th"></i>
+        </a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <span style="color:#fff;font-weight:bold" class="nav-link" href="#">NEPTUNA</span>
+            </li>
+        </ul>
+
+    </nav>
+    <div class="container-fluid" style="padding-right:0px;padding-left:0px;display:flex">
+
+
+            <div style="height:100%;width:2.3%">
+                <div id="sidepanel" style="z-index:100;position:fixed;background-color:#5c8a8a;width:29px;height:100%;padding-top:69px">
+                    <a id="projet-icon" class="obj active" data-toggle="tooltip" title="Projets" style="text-decoration:none;display:block;height:40px;padding-top:8px" href="#">
+                        <i class="fas fa-sitemap" style="color:#fff;margin-left:4px;margin-right:5px"></i>
+                        <span class="item-meaning" style="display:none;color:#fff;margin-right:5px">Projets</span>
+
+                    </a>
+                    <a id="connector-icon"  class="obj" data-toggle="tooltip" title="Connection"  style="text-decoration:none;display:block;height:40px;padding-top:8px" href="#">
+                        <i class="fas fa-link" style="color:#fff;margin-left:5px;margin-right:5px"></i>
+                        <span class="item-meaning" style="display:none;color:#fff">Connexion</span>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+            <div style="width:97.7%">
+                <div id="projets" style="width:100%;height:100%;background-color:#e6e6e6">
+                    <div id="addprojet" style="margin-bottom:10px;background-color:#fff;position:fixed;margin-top:29px;height:40px;width:100%">
+
+                    </div>
+                    <div style="width:100%">
+
+                        <div style="width:100%;padding:10px" id="projectDivContainer">
+
+
+
+
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <div id="connection" style="display:none;width:100%;background-color:#e6e6e6;margin-top:110px">
+
+                </div>
+
+            </div>
+
+
+
+    </div>
+
+    <script src="{% static "frontend/createproject.js" %}"></script>
 </body>
 </html>

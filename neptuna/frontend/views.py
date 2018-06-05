@@ -10,3 +10,7 @@ def connection_page(request):
 @login_required
 def accueil(request):
     return render(request,'frontend/accueil.html')
+@login_required
+def dataset_page(request,projet):
+
+    return render(request,'frontend/dataset.html')
