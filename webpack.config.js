@@ -9,11 +9,16 @@ module.exports = {
         }
       },
 	{
-        test: /\.(png|jpg|jpeg)$/,
+        test: /\.(png|jpg|jpeg|woff|woff2|eot|ttf|svg)$/,
         use:{
           loader: "url-loader"
         }
-      }
+      },
+	{
+
+	test: /\.css$/,
+  	loaders: ['style-loader','css-loader']
+	}
     ]
   }
 };

@@ -7,6 +7,33 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
+
+const styles = theme => ({
+  progress: {
+    margin: theme.spacing.unit * 2,
+  },
+});
+
+function CircularIndeterminate(props) {
+  const { classes } = props;
+  return (
+    <div>
+      <CircularProgress
+            className={classes.progress}
+            size={130}
+
+            thickness={2}/>
+    </div>
+  );
+}
+
+
+const ProgressIndeterminate= withStyles(styles)(CircularIndeterminate);
+
 
 class AlertDialog extends React.Component {
   state = {
@@ -117,7 +144,13 @@ class ConnectForm extends React.Component {
   }
 }
 
-export{Icone,ConnectForm,AlertDialog}
+
+
+
+
+
+
+export{Icone,ConnectForm,AlertDialog,ProgressIndeterminate}
 
 
 

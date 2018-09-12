@@ -1,10 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <title>Neptuna</title>
+    <link rel="stylesheet" href="{% static 'css/jqueryui.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-4.1.1/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sourcefont.css' %}">
+    <link rel="stylesheet" href="{% static 'fontawesome/web-fonts-with-css/css/fontawesome-all.min.css' %}">
+   <style>
+        .navbar{
+                    background-color:#669999;
+                    height:25px;
+                    font-size:12px;
+                    font-family:Source Sans Pro
+                }
+        .active{
+                    background-color:#47c9af/*#0099CC*/
+        }
+        .nav-link{
+                padding-top:0.3rem !important;
+                padding-bottom:0.7rem !important
+
+        }
+
+    </style>
+    {% load static %}
+    {% block head %}
+    {% endblock %}
 </head>
 <body>
+    <div id="navbarContainer">
 
+    </div>
+    {% block content %}
+    {% endblock %}
+<script src="{% static "frontend/base.js" %}"></script>
 </body>
 </html>

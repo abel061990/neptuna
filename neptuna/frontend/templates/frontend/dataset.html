@@ -1,10 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Neptuna</title>
-</head>
-<body>
+{% extends "frontend/base.html" %}
+{% block head %}
+{% load static %}
+<style>
+    .itemtext{
+        background-color:#47c9af;
+        z-index:2
+    }
+    .itemtext:after{
+                content:"";
+                position:relative;
+                top:-5px;
+                left:18%;
+                z-index:1;
+                color:#47c9af;
+                border-top:20px solid blue;
+                border-top-color:inherit;
+                border-left:20px solid transparent;
+                border-right:20px solid transparent
+    }
+    #datalist{
+                font-family:Source Sans Pro;
 
-</body>
-</html>
+            }
+
+</style>
+<script src="{% static 'jquery.min.js' %}"></script>
+<script src="{% static 'jquery-ui.min.js' %}"></script>
+<script>
+    $(document).ready(function(){
+                        $('.dataset').show()
+    })
+</script>
+{% endblock %}
+
+{% block content %}
+<div id="datalist"></div>
+<script src="{% static 'frontend/dataset.js' %}"></script>
+{% endblock %}

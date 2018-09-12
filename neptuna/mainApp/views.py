@@ -93,7 +93,7 @@ def delete_project(request):
     Project.objects.filter(cle=key).delete()
 
     path = os.path.join(os.path.dirname(os.path.dirname(os.getcwd())), os.path.join('Neptuna-1.0', 'Projets', nom))
-    print(path)
+
     sh.rmtree(path,ignore_errors=False)
     mimetype = 'application/json'
     return HttpResponse(mimetype)

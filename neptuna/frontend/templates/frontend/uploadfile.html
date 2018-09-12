@@ -1,0 +1,71 @@
+{% extends "frontend/base.html" %}
+{% block head %}
+{% load static %}
+<style>
+    .progress{
+            top: 25%;
+            background-color:transparent
+    }
+    .itemtext{
+        background-color:#47c9af;
+        z-index:2;
+
+    }
+    .btn{
+        font-family:Source Sans Pro;
+
+    }
+    .itemtext:after{
+                content:"";
+                position:relative;
+                top:-5px;
+                left:18%;
+                z-index:1;
+                color:#47c9af;
+                text-align:center;
+                border-top:20px solid blue;
+                border-top-color:inherit;
+                border-left:20px solid transparent;
+                border-right:20px solid transparent
+    }
+    #datalist{
+                font-family:Source Sans Pro;
+
+            }
+    .ui.secondary.pointing.menu{
+            font-size:11px;
+            border-bottom: 1px solid #ccc!important;
+            height:38px!important
+    }
+    .ui.segment{
+            border:0px !important;
+            box-shadow:0px!important
+    }
+    .noOpen:hover{
+            /*background-color:#B2DFDB*/
+    }
+    .text{
+        font-size:11px
+    }
+    .ui.input{
+            width:100%
+    }
+    .ui.input>input{
+            font-size:11px!important;
+            border-radius:0px!important
+    }
+
+</style>
+<script src="{% static 'jquery.min.js' %}"></script>
+<script src="{% static 'jquery-ui.min.js' %}"></script>
+<script>
+    $(document).ready(function(){
+                        $('.dataset').show();
+
+    })
+</script>
+{% endblock %}
+{% block content %}
+<div id="dropzone"></div>
+<script src="{% static 'frontend/uploadfile.js' %}"></script>
+{% endblock %}

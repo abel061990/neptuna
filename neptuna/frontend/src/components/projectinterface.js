@@ -89,12 +89,13 @@ class ProjectDiv extends React.Component{
                                     <div style={{display:"flex",flexWrap:"wrap",marginTop:"15px"}}>
 
                                     <div style={{marginRight:"20px",marginTop:"20px"}}>
-                                        <a className="iconConteneur" href={this.props.name+'/dataset'} style={{display:"block",border:"1px solid #ccc",borderRadius:"4px",padding:"5px"}}>
+                                        <a className="iconConteneur" href={this.props.id+'/dataset'} style={{display:"block",border:"1px solid #ccc",borderRadius:"4px",padding:"5px"}}>
                                             <Badge className="notification" badgeContent={this.props.data} color="primary" >
                                                 <i className="fas fa-database fa-2x" style={{color:"#595959"}}>
                                                 </i>
                                              </Badge>
                                         </a>
+
                                         <span style={{fontSize:"11px"}}>Données</span>
                                     </div>
 
@@ -193,7 +194,7 @@ class ProjectList extends React.Component{
                             if(response.data.nb==0){
                                 ReactDOM.render(
                                     <div>
-                                        <div className="btn-group" style={{height:"30px",marginLeft:"30%",marginTop:"6.4%"}}>
+                                        <div className="btn-group" style={{height:"30px",marginLeft:"30%",marginTop:"80px"}}>
                                             <input style={{backgroundColor:"#fff",textAlign:"center"}} placeholder="Chercher par nom"/>
                                             <button className="btn" style={{backgroundColor:"#e6e6e6",border:"1px solid #ccc"}}>
                                                 <i className="fas fa-search" style={{color:"#999999"}}></i>
@@ -236,7 +237,7 @@ class ProjectList extends React.Component{
 
                                         ReactDOM.render(
                                                         <div>
-                                                            <div className="btn-group" style={{height:"30px",marginLeft:"30%",marginTop:"6.4%"}}>
+                                                            <div className="btn-group" style={{height:"30px",marginLeft:"30%",marginTop:"80px"}}>
                                                                 <input onChange={this.handleSearch} style={{backgroundColor:"#fff",textAlign:"center"}} placeholder="Chercher par nom"/>
                                                                 <button className="btn" style={{backgroundColor:"#e6e6e6",border:"1px solid #ccc"}}>
                                                                     <i className="fas fa-search" style={{color:"#999999"}}></i>
@@ -299,7 +300,7 @@ class ProjectList extends React.Component{
 
                         ReactDOM.render(
                                         <div>
-                                            <div className="btn-group" style={{height:"30px",marginLeft:"30%",marginTop:"6.4%"}}>
+                                            <div className="btn-group" style={{height:"30px",marginLeft:"30%",marginTop:"80px"}}>
                                                 <input onChange={this.handleSearch} style={{backgroundColor:"#fff",textAlign:"center"}} placeholder="Chercher par nom"/>
                                                 <button className="btn" style={{backgroundColor:"#e6e6e6",border:"1px solid #ccc"}}>
                                                     <i className="fas fa-search" style={{color:"#999999"}}></i>
@@ -324,7 +325,7 @@ class ProjectList extends React.Component{
 
                         ReactDOM.render(
                                         <div>
-                                            <div className="btn-group" style={{height:"30px",marginLeft:"30%",marginTop:"6.4%"}}>
+                                            <div className="btn-group" style={{height:"30px",marginLeft:"30%",marginTop:"80px"}}>
                                                 <input onChange={this.handleSearch} style={{backgroundColor:"#fff",textAlign:"center"}} placeholder="Chercher par nom"/>
                                                 <button className="btn" style={{backgroundColor:"#e6e6e6",border:"1px solid #ccc"}}>
                                                     <i className="fas fa-search" style={{color:"#999999"}}></i>
@@ -376,7 +377,7 @@ class ProjectList extends React.Component{
                          if(Icopy.length>0){
 
                         ReactDOM.render(<div>
-                                            <div className="btn-group" style={{height:"30px",marginLeft:"30%",marginTop:"6.4%"}}>
+                                            <div className="btn-group" style={{height:"30px",marginLeft:"30%",marginTop:"80px"}}>
                                                 <input onChange={this.handleSearch} style={{backgroundColor:"#fff",textAlign:"center"}} placeholder="Chercher par nom"/>
                                                 <button className="btn" style={{backgroundColor:"#e6e6e6",border:"1px solid #ccc"}}>
                                                     <i className="fas fa-search" style={{color:"#999999"}}></i>
@@ -389,7 +390,7 @@ class ProjectList extends React.Component{
                                         </div>,
                                         document.getElementById("projectDivContainer"))}
                         else{ReactDOM.render(<div>
-                                        <div className="btn-group" style={{height:"30px",marginLeft:"30%",marginTop:"6.4%"}}>
+                                        <div className="btn-group" style={{height:"30px",marginLeft:"30%",marginTop:"80px"}}>
                                             <input onClick={this.handleSearch} style={{backgroundColor:"#fff",textAlign:"center"}} placeholder="Chercher par nom"/>
                                             <button className="btn" style={{backgroundColor:"#e6e6e6",border:"1px solid #ccc"}}>
                                                 <i className="fas fa-search" style={{color:"#999999"}}></i>
@@ -451,7 +452,7 @@ class ProjectList extends React.Component{
 
                 ReactDOM.render(
                                 <div>
-                                    <div className="btn-group" style={{height:"30px",marginLeft:"30%",marginTop:"6.4%"}}>
+                                    <div className="btn-group" style={{height:"30px",marginLeft:"30%",marginTop:"80px"}}>
                                         <input onChange={this.handleSearch} style={{backgroundColor:"#fff",textAlign:"center"}} placeholder="Chercher par nom"/>
                                         <button className="btn" style={{backgroundColor:"#e6e6e6",border:"1px solid #ccc"}}>
                                             <i className="fas fa-search" style={{color:"#999999"}}></i>
